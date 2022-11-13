@@ -35,7 +35,7 @@ An example of Django project with basic user functionality.
 ### Clone the project
 
 ```
-git clone https://github.com/egorsmkv/simple-django-login-and-register
+git clone this_repository 
 cd simple-django-login-and-register
 ```
 
