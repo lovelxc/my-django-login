@@ -73,5 +73,5 @@ python source/manage.py collectstatic
 Just run this command:
 
 ```
-python source/manage.py runserver
+python source/manage.py runsslserver
 ```

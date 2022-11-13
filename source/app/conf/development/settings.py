@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     
     # Vendor apps
     'bootstrap4',
-
+    # https
+    "sslserver",
     # Application apps
     'main',
     'accounts',
@@ -92,10 +93,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-ENABLE_USER_ACTIVATION = True
+ENABLE_USER_ACTIVATION = False
 DISABLE_USERNAME = False
-LOGIN_VIA_EMAIL = True
-LOGIN_VIA_EMAIL_OR_USERNAME = False
+LOGIN_VIA_EMAIL = False
+LOGIN_VIA_EMAIL_OR_USERNAME = True
 LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'accounts:log_in'
 USE_REMEMBER_ME = True
@@ -111,7 +112,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 USE_I18N = True
 USE_L10N = True
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'zh-Hans'
 LANGUAGES = [
     ('en', _('English')),
     ('ru', _('Russian')),
