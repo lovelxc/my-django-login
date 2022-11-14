@@ -18,6 +18,8 @@ from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
 from django.views.generic import View, FormView
 from django.conf import settings
+import warnings
+warnings.filterwarnings("ignore",category=DeprecationWarning)
 
 from .utils import (
     send_activation_email, send_reset_password_email, send_forgotten_username_email, send_activation_change_email,
@@ -64,7 +66,7 @@ class LogInView(GuestOnlyView, FormView):
     def form_valid(self, form):
         request = self.request
 
-        # If the test cookie worked, go ahead and delete it since its no longer needed
+         # If the test cookie worked, go ahead and delete it since its no longer needed
         if request.session.test_cookie_worked():
             request.session.delete_test_cookie()
 

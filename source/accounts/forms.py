@@ -8,7 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.utils import timezone
 from django.db.models import Q
 from django.utils.translation import gettext_lazy as _
-
+from captcha.fields import CaptchaField
 
 class UserCacheMixin:
     user_cache = None
@@ -16,7 +16,13 @@ class UserCacheMixin:
 
 class SignIn(UserCacheMixin, forms.Form):
     password = forms.CharField(label=_('Password'), strip=False, widget=forms.PasswordInput)
-
+    captcha = CaptchaField(
+        label=_('验证码'),
+        required=True,
+        error_messages={
+            'required': '验证码不能为空'
+        }
+    )
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

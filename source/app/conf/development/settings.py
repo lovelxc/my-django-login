@@ -28,6 +28,9 @@ INSTALLED_APPS = [
     'bootstrap4',
     # https
     "sslserver",
+    # captcha
+    'captcha',
+    
     # Application apps
     'main',
     'accounts',
