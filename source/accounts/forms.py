@@ -132,6 +132,15 @@ class SignUpForm(UserCreationForm):
             raise ValidationError(_('You can not use this email address.'))
 
         return email
+    
+    def clean_username(self):
+        username = self.cleaned_data['username']
+
+        user = User.objects.filter(username=username).exists()
+        if user:
+            raise ValidationError(_('You can not use this user name.'))
+
+        return username
 
 
 class ResendActivationCodeForm(UserCacheMixin, forms.Form):

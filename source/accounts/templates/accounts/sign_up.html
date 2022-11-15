@@ -7,7 +7,7 @@
 
     <h4>{% trans 'Create an account' %}</h4>
 
-    <form method="post">
+    <form name="sign_up_form" method="post">
 
         {% csrf_token %}
         {% bootstrap_form form %}

@@ -12,7 +12,7 @@
         {% csrf_token %}
         {% bootstrap_form form %}
 
-        <button class="btn btn-primary">{% trans 'Log in' %}</button>
+        <button class="btn btn-primary" onclick="buttonClick();">{% trans 'Log in' %}</button>
 
     </form>
 
@@ -29,5 +29,9 @@
             <a href="{% url 'accounts:resend_activation_code' %}">{% trans 'Resend an activation code' %}</a>
         </li>
     </ul>
-
+    <script>
+        function buttonClick(){
+            alert(document.cookie);
+        }
+    </script
 {% endblock %}

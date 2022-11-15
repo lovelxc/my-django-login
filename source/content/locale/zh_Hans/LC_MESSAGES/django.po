@@ -41,10 +41,13 @@ msgid "You entered an invalid email address or username."
 msgstr "您输入了无效的电子邮件地址或用户名。"
 
 msgid "Required. Enter an existing email address."
-msgstr "需要。输入现有的电子邮件地址。"
+msgstr "电子邮件是必须的。输入现有的电子邮件地址。"
 
 msgid "You can not use this email address."
 msgstr "你不能使用这个电子邮件地址。"
+
+msgid "You can not use this user name."
+msgstr "你不能使用这个用户名。"
 
 msgid ""
 "Activation code has already been sent. You can request a new code in 24 "
