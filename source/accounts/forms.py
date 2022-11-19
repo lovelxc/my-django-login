@@ -20,7 +20,7 @@ class SignIn(UserCacheMixin, forms.Form):
         label=_('验证码'),
         required=True,
         error_messages={
-            'required': '验证码不能为空'
+            'required': _('验证码不能为空')
         }
     )
     def __init__(self, *args, **kwargs):
